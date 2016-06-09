@@ -1,0 +1,111 @@
+<template name="booking">
+	<div class="booking-flow">
+		<div class="navigation">
+			<div class="container">
+				<h1 class="logo"><a href="home.html">
+					<img src="../images/logo.jpg" alt="Uber Health">
+				</a></h1>
+				<div class="four-step">
+					<div class="step-line"></div>
+					<ul class="steps">
+						<li>
+							<div class="step-number">
+								<span>1</span>
+								<p>Choose a Date</p>
+							</div>
+						</li>
+						<li>
+							<div class="step-number">
+								<span>2</span>
+								<p>Customize My Massage</p>
+							</div>
+						</li>
+						<li>
+							<div class="step-number">
+								<span>3</span>
+								<p>Location</p>
+							</div>
+						</li>
+						<li>
+							<div class="step-number">
+								<span>4</span>
+								<p>Check Out</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="links right">
+					<a href="/user">{{currentUser.profile.name}}</a>
+					<a href="/signout">Sign Out</a>
+				</div>
+			</div>
+		</div>
+		<main>
+			<div class="booking">
+				<div class="wrapper">
+				<form>
+					<div class="step" id="1">
+						<header class="head">
+							<h3>Book My UberHealth</h3>
+						</header>
+							<div class="input-field">
+								<label for="datepicker">Pick a date</label>
+								<input  type="text" id="datepicker" name="date" value="today">	
+								<i class="fa fa-calendar"></i>
+							</div>
+							<div class="input-field">
+								<label>Department</label>
+								<select name="type" id="type">
+									<option value="nurse">Nurse</option>
+									<option value="attendant">Attendent</option>
+									<option value="physiotherapist">Physiotherapist</option>
+								</select>	
+								<i class="fa fa-sort-desc"></i>
+							</div>
+							<button class="btn btn-default" type="submit" id="go1">Continue</button>
+					</div>
+					<div class="step hidden" id="2">
+						<header class="head">
+							<h3>Location</h3>
+						</header>
+							<div class="input-field">
+								<label>Street address</label>
+								<input type="text" name="street" novalidate>	
+							</div>
+							<div class="input-field">
+								<label>Street address 2</label>
+								<input type="text" name="street2" mpovalidate placeholder="House no / Floor / Apt">	
+							</div>
+							<div class="input-field">
+								<label>City</label>
+								<input type="text" name="city" novalidate>	
+							</div>
+							<div class="input-field half-field">
+								<label>State/Province</label>
+								<input type="text" name="state" novalidate>	
+							</div>
+							<div class="input-field half-field right">
+								<label>Zip/Post code</label>
+								<input type="text" name="zip" novalidate>	
+							</div>
+							<button class="btn btn-default" id="go2" type="submit">Continue</button>
+					</div>	
+					<div class="step hidden" id="3">
+						<header class="head">
+							<h3>Check Out with COD</h3>
+						</header>
+						
+						<div class="card-tabs">
+							<ul>
+								<li><button class="btn btn-success" id="confirm">Confirm Order</button></li>
+								<li><button class="btn btn-danger" id="cancel">Cancel Order</button></li>
+							</ul>
+						</div>	
+					</div>	
+				</form>	
+				</div>
+			</div>
+		</main>	
+	</div>
+	{{>footer}}
+</template>

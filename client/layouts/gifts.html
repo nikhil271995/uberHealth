@@ -1,0 +1,135 @@
+<template name="gifts">
+	
+	<header class="main-header header-white-bg">
+		{{>header}}
+	</header>
+	<div class="gift">
+		<div class="gift-banner">
+			<img src="images/about-bg.jpg">
+			<div class="gift-card">
+				<img src="images/gift-card.png">
+			</div>
+		</div>	
+		<div class="gift-body">
+			<div class="container">	
+				<div class="gift-coupen">
+					<div class="col">
+						<h3>Massage Lover</h3>
+						<h4>3 hours of massage</h4>
+						<span>5% off</span>
+						<p>$282, originally $297</p>
+					</div>
+					<div class="col">
+						<h3>Massage Lover</h3>
+						<h4>3 hours of massage</h4>
+						<span>5% off</span>
+						<p>$282, originally $297</p>
+					</div>
+					<div class="col">
+						<h3>Massage Lover</h3>
+						<h4>3 hours of massage</h4>
+						<span>5% off</span>
+						<p>$282, originally $297</p>
+					</div>
+				</div>
+				<div class="gift-form">
+					<header class="head">
+						<h3>Purchase Gift Now</h3>
+					</header>
+					<form>
+						<div class="form-application">
+							<div class="col">
+								<div class="form-row">
+									<span class="form-number">
+										<span class="number">1</span>
+										<p>Gift Certificate Details</p>
+									</span>
+									<div class="input-field">
+										<label>Select Gift</label>
+										<select>
+											<option>$99 (1 hour massage)</option>
+											<option>$99 (1 hour massage)</option>
+											<option>$99 (1 hour massage)</option>
+											<option>$99 (1 hour massage)</option>
+											<option>$99 (1 hour massage)</option>
+										</select>
+									</div>
+									<div class="input-field">
+										<label>Send on</label>
+										<input type="text" id="datepicker" value="today">
+									</div>	
+								</div>
+								<div class="form-row">
+									<span class="form-number">
+										<span class="number">2</span>
+										<p>RECIPIENT'S DETAILS</p>
+									</span>
+									<div class="input-field half-field">
+										<label>Recipient Name</label>
+										<input type="text">
+									</div>
+									<div class="input-field half-field">
+										<label>Recipient Email</label>
+										<input type="text">
+									</div>
+									<div class="input-field">
+										<label>Message to Recipient (optional)</label>
+										<textarea>Please enjoy a massage on me from my friends at Soothe.</textarea>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-row">
+									<span class="form-number">
+										<span class="number">3</span>
+										<p>YOUR CONTACT INFORMATION</p>
+									</span>
+									<div class="input-field">
+										<label>Your name</label>
+										<input type="text" value="{{currentUser.profile.name}}">
+									</div>
+									<div class="input-field">
+										<label>Your Email Address</label>
+										<input type="text" value="{{currentUser.emails.[0].address}}">
+									</div>
+								</div>
+								<div class="form-row">
+									<span class="form-number">
+										<span class="number">4</span>
+										<p>payment INFORMATION</p>
+									</span>
+									<div class="input-field">
+										<label>Name on Card</label>
+										<input type="text">
+									</div>
+									<div class="input-field">
+										<label>Card Number</label>
+										<input type="text">
+									</div>
+									<div class="input-field half-field-cvv">
+										<label>Month(MM)</label>
+										<input type="text">
+									</div>
+									<div class="input-field half-field-cvv">
+										<label>Year(YYYY)</label>
+										<input type="text">
+									</div>
+									<div class="input-field half-field-cvv">
+										<label>CVC</label>
+										<input type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<h4>* Note, this is not a physical gift card, but a certificate code emailed to the recipient</h4>
+						<div class="form-footer">
+							<span class="price">total cost<em>$99</em></span>
+							<input type="submit" class="form-submit" value="Confirm Purchase">
+						</div>	
+					</form>
+				</div>		
+			</div>
+		</div>
+	</div>
+	{{>footer}}
+</template>

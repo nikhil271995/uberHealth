@@ -1,0 +1,20 @@
+<template name="signup">
+	<div class="sign-up">
+		<form class="register-form">
+			<input type="text" name="firstname" placeholder="First Name" class="half-field">
+			<input type="text" name="lastname" placeholder="Last Name" class="half-field right">
+			<input type="email" name="email" placeholder="Email">
+			<input type="number" name="number" placeholder="Phone Number">
+			<input type="number" name="postal_code" placeholder="Zip Code" maxlength="6">
+			<input type="password" name="password" placeholder="Password" class="half-field">
+			<input type="password" name="reconfirm" placeholder="Confirm Password" class="half-field right form-error">
+			<input type="text" placeholder="Promo Code(optional)">
+			<div class="btn btn-default">
+				<input type="submit" value="creat a uberhealth account">
+			</div>
+			<span>Don't have an account?
+				<a href="login">Login</a>
+			</span>
+		</form>
+	</div>
+</template>
