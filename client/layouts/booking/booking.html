@@ -35,22 +35,26 @@
 					</ul>
 				</div>
 				<div class="links right">
-					<a href="/user">{{currentUser.profile.name}}</a>
-					<a href="/signout">Sign Out</a>
+					{{#if currentUser}}
+						<a href="/user">{{currentUser.profile.name}}</a>
+						<a href="/signout">Sign Out</a>
+					{{else}}
+						<a href="/login">Sign In</a>
+					{{/if}}
 				</div>
 			</div>
 		</div>
 		<main>
 			<div class="booking">
 				<div class="wrapper">
-				<form>
+				<form class="booking">
 					<div class="step" id="1">
 						<header class="head">
 							<h3>Book My UberHealth</h3>
 						</header>
 							<div class="input-field">
 								<label for="datepicker">Pick a date</label>
-								<input  type="text" id="datepicker" name="date" value="today">	
+								<input  type="text" id="datepicker" name="date" value="today" required>	
 								<i class="fa fa-calendar"></i>
 							</div>
 							<div class="input-field">
@@ -70,23 +74,23 @@
 						</header>
 							<div class="input-field">
 								<label>Street address</label>
-								<input type="text" name="street" novalidate>	
+								<input type="text" id="street" name="street" required>	
 							</div>
 							<div class="input-field">
 								<label>Street address 2</label>
-								<input type="text" name="street2" mpovalidate placeholder="House no / Floor / Apt">	
+								<input type="text" id="street2" name="street2" required placeholder="House no / Floor / Apt">	
 							</div>
 							<div class="input-field">
 								<label>City</label>
-								<input type="text" name="city" novalidate>	
+								<input type="text" id="city" name="city" required>	
 							</div>
 							<div class="input-field half-field">
 								<label>State/Province</label>
-								<input type="text" name="state" novalidate>	
+								<input type="text" id="state" name="state" required>	
 							</div>
 							<div class="input-field half-field right">
 								<label>Zip/Post code</label>
-								<input type="text" name="zip" novalidate>	
+								<input type="text" id="zip" name="zip" required>	
 							</div>
 							<button class="btn btn-default" id="go2" type="submit">Continue</button>
 					</div>	

@@ -21,7 +21,7 @@ Template.signup.events({
     }
 });
 
-Template.login.events({
+Template.login.events({ 
     'submit .login-form': function (event) {
         event.preventDefault();
         var email = event.target.email.value;

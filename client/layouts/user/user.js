@@ -11,6 +11,19 @@ Template.userhome.rendered = function () {
 };
 Template.userhome.events({
 	'click #save':function(event){
-		Meteor.call
+	event.preventDefault();
+	Meteor.call('updatePhone', event.target.form.phone.value);
+	},
+	'click #saveadd':function(event){
+		event.preventDefault();
+		var address ={
+			"street":event.target.form.street.value,
+			"street2":event.target.form.street2.value,
+			"zip":event.target.form.zip.value,
+			"suite":event.target.form.suite.value,
+			"city":event.target.form.city.value,
+			"state":event.target.form.state.value,
+		}
+		Meteor.call("updateAddress",address);
 	}
 });
